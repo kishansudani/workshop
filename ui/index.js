@@ -1,32 +1,40 @@
 const ethers = require('ethers')
 const { RelayProvider } = require("@opengsn/gsn")
-const relayHubAddress = require('../build/gsn/RelayHub.json').address
-const stakeManagerAddress = require('../build/gsn/StakeManager.json').address
-const paymasterAddress = require('../build/gsn/Paymaster.json').address
 
-
+const { getNetworkConfig } = require( '../config/config')
 
 const contractArtifact = require('../build/contracts/CaptureTheFlag.json')
-const contractAddress = contractArtifact.networks[window.ethereum.networkVersion].address
 const contractAbi = contractArtifact.abi
 
+let contractAddress
 let provider
 let network
+let networkConfig
 
 async function identifyNetwork () {
   const tmpProvider = new ethers.providers.Web3Provider(window.ethereum);
   network = await tmpProvider.ready
-  const gsnConfig = {
-    relayHubAddress,
-    paymasterAddress,
-    stakeManagerAddress,
+
+  try {
+    networkConfig = getNetworkConfig()
+    contractAddress = networkConfig.captureTheFlag || contractArtifact.networks[window.ethereum.networkVersion].address
+
+  } catch (e) {
+    console.log('network error:',e)
+    log( "<font color='red'>Please switch to Kovan network</font>")
+    return
+  }
+
+
+  const gsnConfig = Object.assign({},{
     methodSuffix: '_v4',
     jsonStringifyRequest: true,
     // TODO: this is actually a reported bug in MetaMask. Should be:
     // chainId: network.chainId
     // but chainID == networkId on top ethereum networks. See https://chainid.network/
     chainId: window.ethereum.networkVersion
-  }
+  }, networkConfig
+  )
   const gsnProvider = new RelayProvider(window.ethereum, gsnConfig);
   provider = new ethers.providers.Web3Provider(gsnProvider)
   return network
@@ -50,7 +58,9 @@ function log(message) {
     if ( !logview) {
         logview = document.getElementById('logview')
     }
-    logview.innerHTML = message+"<br>\n"+logview.innerHTML
+    sep = "<br>\n"
+	// leave just the last 5 lines (last entry first..)
+    logview.innerHTML = [ message, ...logview.innerHTML.split(sep) ].slice(0,5).join(sep)
 }
 async function listenToEvents () {
   const contract = new ethers.Contract(

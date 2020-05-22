@@ -18,10 +18,14 @@
   "scripts": {
     "ganache": "yarn run ganache-cli -d",
     "test": "truffle test",
-    "compile": "truffle compile",
+    "compile": "npx truffle compile",
     "gsn-start": "gsn start",
-    "start": "truffle deploy && ./ui/compile.sh && yarn serve ./html"
+    "start": "truffle deploy && ./ui/compile.sh && yarn serve ./html",
+    "build": "yarn compile && ./ui/compile.sh"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "truffle": "^5.1.26"
+  }
 }
