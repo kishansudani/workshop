@@ -11,6 +11,10 @@ contract CaptureTheFlag is BaseRelayRecipient {
 
     address public currentHolder = address(0);
 
+    function versionRecipient() external override view returns (string memory) {
+        return "1.0.0";
+    }
+
     function setTrustedForwarder(address _trustedForwarder) public {
         trustedForwarder = _trustedForwarder;
     }

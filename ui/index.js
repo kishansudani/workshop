@@ -1,3 +1,4 @@
+const  {resolveConfigurationGSN} = require( "@opengsn/gsn" )
 const ethers = require('ethers')
 const { RelayProvider } = require("@opengsn/gsn")
 
@@ -25,16 +26,18 @@ async function identifyNetwork () {
     return
   }
 
-
-  const gsnConfig = Object.assign({},{
+  const gsnConfig = await resolveConfigurationGSN(window.ethereum,  {
+    ...networkConfig,
     methodSuffix: '_v4',
     jsonStringifyRequest: true,
+    verbose: true,
     // TODO: this is actually a reported bug in MetaMask. Should be:
     // chainId: network.chainId
     // but chainID == networkId on top ethereum networks. See https://chainid.network/
-    chainId: window.ethereum.networkVersion
-  }, networkConfig
-  )
+    chainId: window.ethereum.networkVersion,
+    relayLookupWindowBlocks: 1e6
+  })
+  console.log('resolved config=' , gsnConfig)
   const gsnProvider = new RelayProvider(window.ethereum, gsnConfig);
   provider = new ethers.providers.Web3Provider(gsnProvider)
   return network

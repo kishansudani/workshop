@@ -5,11 +5,9 @@ function getNetworkConfig(netid) {
   if (  id<1000 ) {
     net = networks[id]
   } else {
-    path='../build/gsn/'
     net = {
-      relayHubAddress: require(path+'RelayHub').address,
-      stakeManagerAddress: require(path+'StakeManager').address,
-      paymasterAddress: require(path+'aymaster.json').address
+      paymasterAddress: require('../build/gsn/Paymaster.json').address,
+      forwarderAddress: require('../build/gsn/Forwarder.json').address
     }
   }
   if ( !net ) {

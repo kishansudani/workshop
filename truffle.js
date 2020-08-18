@@ -8,6 +8,11 @@ module.exports = {
       provider: () => new HDWalletProvider(mnemonic, kovanUrl),
       network_id: 42
     },
+    ropsten: {
+      provider: () => new HDWalletProvider(mnemonic, kovanUrl.replace('kovan','ropsten')),
+      network_id: 3
+    },
+   
     development: {
       host: "127.0.0.1",
       port: 8545,
@@ -16,7 +21,7 @@ module.exports = {
   },
   compilers: {
     solc: {
-      version: "0.6.2"
-   }
- }
-};
+      version: '0.6.10'
+    }
+  }
+}

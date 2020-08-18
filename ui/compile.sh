@@ -1,4 +1,5 @@
 #! /bin/bash
+set -o pipefail
 
 rm -rf ./html/
 mkdir ./html/
