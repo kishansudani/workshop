@@ -82,3 +82,4 @@ window.app = {
   identifyNetwork
 }
 
+console.log( 'window.app=', window.app)
