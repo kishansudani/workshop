@@ -15,7 +15,7 @@
     "web3": "1.2.7"
   },
   "scripts": {
-    "ganache": "yarn run ganache-cli -d",
+    "geth-dev": "./docker_geth.sh",
     "test": "truffle test",
     "compile": "truffle compile",
     "start": "truffle deploy && ./ui/compile.sh && yarn serve ./html"
