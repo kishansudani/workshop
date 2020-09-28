@@ -12,6 +12,10 @@ module.exports = {
       provider: () => new HDWalletProvider(mnemonic, kovanUrl.replace('kovan','ropsten')),
       network_id: 3
     },
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, kovanUrl.replace('kovan','rinkeby')),
+      network_id: 4
+    },
    
     development: {
       host: "127.0.0.1",

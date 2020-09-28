@@ -1,22 +1,33 @@
 module.exports = {
   networks: {
     42: {
-      addressUrl: 'https://dashboard.tenderly.dev/contract/kovan/',
-      txUrl: 'https://dashboard.tenderly.dev/tx/kovan/',
+      addressUrl: 'https://dashboard.tenderly.co/contract/kovan/',
+      txUrl: 'https://dashboard.tenderly.co/tx/kovan/',
       // addressUrl: 'https://kovan.etherscan.io/address/',
       // txUrl: 'https://kovan.etherscan.io/tx/',
-      paymasterAddress: '0x9940c8e12Ca14Fe4f82646D6d00030f4fC3C7ad1',
-      forwarderAddress: '0x663946D7Ea17FEd07BF1420559F9FB73d85B5B03',
-      captureTheFlag: '0x737E39167485C41eEfCa9b31AA8dA6d426cA5974'
+      paymasterAddress: '0x82b22404fC614f1036FaA9787610aeDd38d365ae',
+      forwarderAddress: '0x79Dd243E7966FBB5F539b9f7798AC6CB7c13585B',
+      captureTheFlag: '0x89B297C1C93F82B2797b0342d628d6220Ee15cE6'
     },
+
+    4: {
+      addressUrl: 'https://dashboard.tenderly.co/contract/rinkeby/',
+      txUrl: 'https://dashboard.tenderly.co/tx/rinkeby/',
+      // addressUrl: 'https://rinkeby.etherscan.io/address/',
+      // txUrl: 'https://rinkeby.etherscan.io/tx/',
+      paymasterAddress: '0x186716C974e864868a2fc052632D528845D18F29',
+      forwarderAddress: '0xf86a8396e0e94ad5d6e499f71bb0a64a596958f9',
+      captureTheFlag: '0x7A2014c282ffb3Dc968dE52Db21f80A9e0A5e981' 
+   },
+
     3: {
-      addressUrl: 'https://dashboard.tenderly.dev/contract/ropsten/',
-      txUrl: 'https://dashboard.tenderly.dev/tx/ropsten/',
+      addressUrl: 'https://dashboard.tenderly.co/contract/ropsten/',
+      txUrl: 'https://dashboard.tenderly.co/tx/ropsten/',
       // addressUrl: 'https://ropsten.etherscan.io/address/',
       // txUrl: 'https://ropsten.etherscan.io/tx/',
-      paymasterAddress: '0x4aa21CdEba9dfEC2C2621b83a15262a41C67aC67',
-      forwarderAddress: '0x766400B526fB5889AE6C52b369671F5eE137880b',
-      captureTheFlag: '0xEDdafFdb235dDB9A6189FbFEb9A572B65d6BB187'
+      paymasterAddress: '0x55FfF885da4A9950a7A4Fad9ae78fE3801Bf5A5d',
+      forwarderAddress: '0xB34D046DebF9a427D2818a22b5A9285b798F70f8',
+      captureTheFlag: '0x5B3403F215799E3Af100BDCB37f3Fd925aD80f76'
     }
   }
 }

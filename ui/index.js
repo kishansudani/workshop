@@ -22,7 +22,7 @@ async function identifyNetwork () {
 
   } catch (e) {
     console.log('network error:',e)
-    log( "<font color='red'>Please switch to Kovan network</font>")
+    log( "<font color='red'>Please switch to one of Kovan/Ropsten/Rinkeby networks</font>")
     return
   }
 

@@ -7,8 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "@opengsn/gsn": "2.0.0-beta.1.2",
-    "@opengsn/paymasters": "2.0.0-beta.1.2",
+    "@opengsn/gsn": "^2.0.0-beta.3",
     "@openzeppelin/contracts": "3.1.0",
     "browserify": "16.5.1",
     "ethers": "5.0.0-beta.187",
