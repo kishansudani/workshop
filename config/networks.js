@@ -5,9 +5,9 @@ module.exports = {
       txUrl: 'https://dashboard.tenderly.co/tx/kovan/',
       // addressUrl: 'https://kovan.etherscan.io/address/',
       // txUrl: 'https://kovan.etherscan.io/tx/',
-      paymasterAddress: '0x82b22404fC614f1036FaA9787610aeDd38d365ae',
-      forwarderAddress: '0x79Dd243E7966FBB5F539b9f7798AC6CB7c13585B',
-      captureTheFlag: '0x89B297C1C93F82B2797b0342d628d6220Ee15cE6'
+      paymasterAddress: '0x083082b7Eada37dbD8f263050570B31448E61c94',
+      forwarderAddress: '0x0842Ad6B8cb64364761C7c170D0002CC56b1c498',
+      captureTheFlag: '0x22d1300304Ea3B658f0a6e925dd62bcfcDd91ce4'
     },
 
     4: {
@@ -15,8 +15,8 @@ module.exports = {
       txUrl: 'https://dashboard.tenderly.co/tx/rinkeby/',
       // addressUrl: 'https://rinkeby.etherscan.io/address/',
       // txUrl: 'https://rinkeby.etherscan.io/tx/',
-      paymasterAddress: '0x186716C974e864868a2fc052632D528845D18F29',
-      forwarderAddress: '0xf86a8396e0e94ad5d6e499f71bb0a64a596958f9',
+      paymasterAddress: '0x43d66E6Dce20264F6511A0e8EEa3f570980341a2',
+      forwarderAddress: '0x956868751Cc565507B3B58E53a6f9f41B56bed74',
       captureTheFlag: '0x7A2014c282ffb3Dc968dE52Db21f80A9e0A5e981' 
    },
 
@@ -25,8 +25,8 @@ module.exports = {
       txUrl: 'https://dashboard.tenderly.co/tx/ropsten/',
       // addressUrl: 'https://ropsten.etherscan.io/address/',
       // txUrl: 'https://ropsten.etherscan.io/tx/',
-      paymasterAddress: '0x55FfF885da4A9950a7A4Fad9ae78fE3801Bf5A5d',
-      forwarderAddress: '0xB34D046DebF9a427D2818a22b5A9285b798F70f8',
+      paymasterAddress: '0x8057c0fb7089BB646f824fF4A4f5a18A8d978ecC',
+      forwarderAddress: '0x25CEd1955423BA34332Ec1B60154967750a0297D',
       captureTheFlag: '0x5B3403F215799E3Af100BDCB37f3Fd925aD80f76'
     }
   }
