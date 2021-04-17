@@ -1,3 +1,23 @@
+## How to use 
+
+>open one terminal and type
+
+```javascript
+yarn ganache
+```
+
+>open second terminal and type
+
+```javascript
+yarn gsn-start
+```
+
+>open third terminal and type
+
+```javascript
+yarn start
+```
+
 # GSN v2 integration workshop
 
 This sample dapp emits an event with the last account that clicked on the "capture the flag" button.
@@ -19,3 +39,5 @@ https://docs.opengsn.org/tutorials
 Documentation explaining how everything works:
 
 https://docs.opengsn.org/
+
+
