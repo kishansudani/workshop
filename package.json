@@ -24,16 +24,6 @@
     "start": "truffle deploy && ./ui/compile.sh && yarn serve ./html"
   },
   "author": "",
-  "license": "ISC",
-  "main": "truffle.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kishansudani/workshop.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kishansudani/workshop/issues"
-  },
-  "homepage": "https://github.com/kishansudani/workshop#readme"
+  "license": "ISC"
 }
 clear
